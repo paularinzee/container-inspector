@@ -37,14 +37,9 @@ Returns a JSON array of the last 50 recorded diagnoses.
 - An active Anthropic API key set in your environment (ANTHROPIC_API_KEY).
 ---
 
-### Installation & Execution
+### Running the Container
 
-1. Install the required Python dependencies:
-
-```bash
-pip install docker flask requests anthropic
-```
-2. Set your environment variables:
+1. Set your environment variables:
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-...
@@ -56,10 +51,10 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/YOUR/WEBHOOK/URL
 MAX_DIAGNOSES_PER_HOUR=20
 ```
 
-3. Run the script:
+2. Start the service in detached mode:
 
 ```bash
-python container_doctor.py
+docker compose up -d
 ```
 ## Author
 
